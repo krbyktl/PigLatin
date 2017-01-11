@@ -37,7 +37,7 @@ public String pigLatin(String sWord)
     String b = sWord.substring(2, sWord.length());
     return b + a + "ay";
   }
-  if(findFirstVowel(sWord) != -1 || findFirstVowel(sWord) != 0)
+  if(findFirstVowel(sWord) != -1 && findFirstVowel(sWord) != 0)
   {
     String c = sWord.substring(0, findFirstVowel(sWord));
     String d = sWord.substring(findFirstVowel(sWord), sWord.length());
