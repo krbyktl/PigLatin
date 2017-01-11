@@ -23,7 +23,7 @@ public int findFirstVowel(String sWord)
 
 public String pigLatin(String sWord)
 {
-  if(i == 0)
+  if(findFirstVowel(sWord) == 0)
   {
       return sWord + "way";
   }
@@ -31,6 +31,18 @@ public String pigLatin(String sWord)
 	{
 		return sWord + "ay";
 	}
+  if(sWord.substring(0,2).equals("qu"))
+  {
+    String a = sWord.substring(0, 2);
+    String b = sWord.substring(2, sWord.length());
+    return b + a + "ay";
+  }
+  if(findFirstVowel(sWord) != -1 || findFirstVowel(sWord) != 0)
+  {
+    String c = sWord.substring(0, findFirstVowel(sWord));
+    String d = sWord.substring(findFirstVowel(sWord), sWord.length());
+    return d + c + "ay";
+  }
 	else
 	{
 		return "ERROR!";
